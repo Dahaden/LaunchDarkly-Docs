@@ -24,7 +24,7 @@ Provide an absolute URL, whether the webhook should be signed, and a optional po
 
 ## Signing webhooks
 
-When creating a webhook, you can define an optional secret. If defined, the webhook `POST` request will include an `X-LD-Signature` header, whose value will contain an HMAC SHA256 hex digest of the webhook payload, using the secret as the key.
+When creating a webhook, you can define an optional secret. If defined, the webhook `POST` request will include an `X-Ld-Signature` header, whose value will contain an HMAC SHA256 hex digest of the webhook payload, using the secret as the key.
 
 You should compute the signature of the payload using the same shared secret in your code to verify that the webhook was triggered by LaunchDarkly.
 
